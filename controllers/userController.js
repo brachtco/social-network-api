@@ -4,8 +4,10 @@ module.exports = {
   getUser(req, res) {
     User.find()
       .then((user) => res.json(user))
-      .catch((err) => res.status(500).json(err));
+      .catch((err) => {
+        res.status(500).json(err);
       console.log(err);
+  })
   },
 
   getSingleUser(req, res) {
@@ -28,7 +30,10 @@ module.exports = {
   },
 
   updateUser(req, res) {
-    User.finOneAndUpdate({ _id: req.params.userId })
+    User.findOneAndUpdate({ _id: req.params.userId }, {
+      $set: req.body,
+    }, {runValidators: true, 
+    new: true,})
       .then((user) =>
         !user
           ? res.status(400).json({ message: "No user found with this ID!" })
@@ -38,10 +43,9 @@ module.exports = {
   },
 
   deleteUser(req, res) {
-    User.finOneAndDelete(
-      { _id: req.params.userId },
-      { $set: req.body },
-      { runValidators: true, new: true }
+    User.findOneAndDelete(
+      { _id: req.params.userId }
+     
     )
       .then((user) =>
         !user
