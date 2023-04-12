@@ -18,14 +18,15 @@ module.exports = {
       .catch((err) => res.status(500).json(err));
   },
 
-  createThought(req, rew) {
+  createThought(req, res) {
     Thought.create(req.body)
       .then((thought) => {
-      return User.findOneAndUpdate(
-        {_id: req.body.userId}, 
-        {$push: {thoughts: thought._id}},
-        {new: true}
-      )})
+        return User.findOneAndUpdate(
+          { _id: req.body.userId },
+          { $push: { thoughts: thought._id } },
+          { new: true }
+        );
+      })
       .catch((err) => {
         console.log(err);
         return res.status(500).json(err);
@@ -85,5 +86,3 @@ module.exports = {
       .catch((err) => res.status(500).json(err));
   },
 };
-
-
