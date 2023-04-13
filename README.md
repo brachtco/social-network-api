@@ -8,9 +8,9 @@ friends thoughts. It will use the Express.js and Mongoose packages.
 
 ## Installation
 
-Express
-Mongoose
-Node
+Express  
+Mongoose  
+Node  
 
 ## Usage 
 
@@ -20,7 +20,7 @@ The screenshot below shows the API routes in Insomnia.
 
 ## License 
 
-MIT
+MIT  
 https://opensource.org/license/mit/
 
 ## Links
