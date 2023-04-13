@@ -25,6 +25,6 @@ https://opensource.org/license/mit/
 
 ## Links
 
-Deployed Link: 
+Walkthrough Presentation Video: https://drive.google.com/file/d/19VQuz4NIHtmFktHqVUVTfWZNnrBRqtBt/view
 
 GitHub Repo: 
