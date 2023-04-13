@@ -27,4 +27,4 @@ https://opensource.org/license/mit/
 
 Walkthrough Presentation Video: https://drive.google.com/file/d/19VQuz4NIHtmFktHqVUVTfWZNnrBRqtBt/view
 
-GitHub Repo: 
+GitHub Repo: https://github.com/brachtco/social-network-api
